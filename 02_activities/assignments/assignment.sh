@@ -49,8 +49,8 @@ mv ../raw/rawdata/*  ../raw/
 cp ../raw/*server*.log  ./server_logs/
 #cp  ./data/raw/*server*.log  ./data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
-# cp  raw/rawdata/*user*.log  processed/user_logs/
-# cp  raw/rawdata/*event*.log  processed/event_logs/
+cp  ../raw/*user*.log  ./user_logs/
+cp  ../raw/*event*.log  ./event_logs/
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 # rm  raw/rawdata/*ipaddr*
 # rm  processed/user_logs/*ipaddr*
