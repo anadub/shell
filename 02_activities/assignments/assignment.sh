@@ -23,18 +23,10 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
-#unzip  -oq  rawdata.zip
 cd data
 mkdir raw
 cd  ..
-# I wrote ./rawdata instead of rawdata
 mv  ./rawdata  ./data/raw/
-# cd data
-# mkdir raw
-# cd  ..
-# mv  rawdata.zip  ./data/raw/
-# cd  data/raw/
-# unzip  -oq  rawdata.zip
 # 3. List the contents of the ./data/raw directory
 ls  ./data/raw/
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
@@ -43,11 +35,8 @@ mkdir  processed
 cd  processed
 mkdir  server_logs  user_logs  event_logs
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-# mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
-#cp ../raw/*server*.log ./server_logs/
 mv ../raw/rawdata/*  ../raw/
 cp ../raw/*server*.log  ./server_logs/
-#cp  ./data/raw/*server*.log  ./data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
 cp  ../raw/*user*.log  ./user_logs/
 cp  ../raw/*event*.log  ./event_logs/
@@ -55,7 +44,7 @@ cp  ../raw/*event*.log  ./event_logs/
 rm  ../raw/*ipaddr*
 rm  ./user_logs/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-touch  ../inventory.txt
+# touch  ../inventory.txt
 ls  ./*/*  >> ../inventory.txt
 
 ###########################################
