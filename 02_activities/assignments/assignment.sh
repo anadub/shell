@@ -24,12 +24,12 @@ unzip -q rawdata.zip
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
 #unzip  -oq  rawdata.zip
-cd data
-mkdir raw
-cd  ..
+#cd data
+#mkdir raw
+#cd  ..
 # I wrote ./rawdata instead of rawdata
 #mv  ./rawdata  ./data/raw/
-mv  ./rawdata/*  ./data/raw/
+mv ./rawdata ./data
 # cd data
 # mkdir raw
 # cd  ..
